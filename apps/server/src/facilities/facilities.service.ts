@@ -2,6 +2,7 @@
 import { Injectable } from '@nestjs/common';
 import { prisma } from '../../../../packages/database/src/client';
 
+
 @Injectable()
 export class FacilitiesService {
   async searchFacilities(query: string) {

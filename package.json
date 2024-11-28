@@ -1,5 +1,5 @@
 {
-  "name": "healthcare-monorepo",
+  "name": "@healthcare/root",
   "private": true,
   "version": "1.0.0",
   "workspaces": [
@@ -7,10 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspace=@healthcare-monorepo/shared && npm run build --workspaces --if-present",
-    "dev": "concurrently \"npm run dev --workspace=@healthcare-monorepo/shared\" \"npm run dev --workspace=@healthcare-monorepo/client\" \"npm run dev --workspace=@healthcare-monorepo/server\"",
-    "dev:client": "npm run dev --workspace=client",
-    "dev:server":"npm run dev --workspace=server",
+    "build": "npm run build --workspace=@healthcare/shared && npm run build --workspaces --if-present",
+    "dev": "concurrently \"npm run dev --workspace=@healthcare/shared\" \"npm run dev --workspace=@healthcare/client\" \"npm run dev --workspace=@healthcare/server\"",
     "db:generate": "npm run db:generate --workspace=@healthcare/database",
     "db:push": "npm run db:push --workspace=@healthcare/database",
     "db:seed": "npm run db:seed --workspace=@healthcare/database"

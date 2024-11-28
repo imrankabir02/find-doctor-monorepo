@@ -1,0 +1,47 @@
+import { z } from 'zod';
+export declare const facilitySchema: z.ZodObject<{
+    id: z.ZodString;
+    type: z.ZodString;
+    orgPracId: z.ZodString;
+    username: z.ZodOptional<z.ZodString>;
+    name: z.ZodString;
+    ranking: z.ZodNumber;
+    photo: z.ZodOptional<z.ZodString>;
+    category: z.ZodString;
+    subCategory: z.ZodArray<z.ZodString, "many">;
+    rating: z.ZodNumber;
+    totalAppointments: z.ZodNumber;
+    zone: z.ZodArray<z.ZodString, "many">;
+    branch: z.ZodArray<z.ZodString, "many">;
+    areaOfPractice: z.ZodString;
+}, "strip", z.ZodTypeAny, {
+    id: string;
+    type: string;
+    orgPracId: string;
+    name: string;
+    ranking: number;
+    category: string;
+    subCategory: string[];
+    rating: number;
+    totalAppointments: number;
+    zone: string[];
+    branch: string[];
+    areaOfPractice: string;
+    username?: string | undefined;
+    photo?: string | undefined;
+}, {
+    id: string;
+    type: string;
+    orgPracId: string;
+    name: string;
+    ranking: number;
+    category: string;
+    subCategory: string[];
+    rating: number;
+    totalAppointments: number;
+    zone: string[];
+    branch: string[];
+    areaOfPractice: string;
+    username?: string | undefined;
+    photo?: string | undefined;
+}>;
